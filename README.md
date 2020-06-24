@@ -1,4 +1,4 @@
-# DCAT Vocabulary Profile
+# DCAT Vocabularies Profile
 
 A profile of DCAT for the cataloguing of vocabularies
 
