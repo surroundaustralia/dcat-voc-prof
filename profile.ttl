@@ -1,0 +1,74 @@
+PREFIX dcat: <http://www.w3.org/ns/dcat#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX prof: <http://www.w3.org/ns/dx/prof/>
+PREFIX role: <http://www.w3.org/ns/dx/prof/role/>
+PREFIX sdo: <https://schema.org/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+
+<https://w3id.org/profile/dcat-voc>
+    a prof:Profile ;
+    dcterms:created "2020-06-24"^^xsd:date ;
+    dcterms:creator <https://surroundaustralia.com> ;
+    dcterms:modified "2020-06-24"^^xsd:date ;
+    dcterms:publisher <https://surroundaustralia.com> ;
+    dcterms:description "A profile of DCAT for the cataloguing of vocabularies."@en ;
+    dcterms:title "DCAT Vocabulary Profile" ;
+    prof:hasResource [
+        dcterms:title "Specification Document"@en ;
+        dcterms:conformsTo <https://www.w3.org/TR/html52/> ;
+        dcterms:format "text/html" ;
+        prof:hasArtifact <https://w3id.org/profile/dcat-voc/specification.html> ;
+        prof:hasRole role:specification
+    ] ,
+    [
+        dcterms:title "Validation tests"@en ;
+        dcterms:description "This file contains all the SHACL graph shapes constraints defined for this profile as well as those inherited from the things this profile profiles"@en ;
+        dcterms:conformsTo <https://www.w3.org/TR/shacl/> ;
+        dcterms:format "text/turtle" ;
+        prof:hasArtifact <https://w3id.org/profile/dcat-voc/validation.ttl> ;
+        prof:hasRole role:validation
+    ] ,
+    [
+        dcterms:title "Profile constraints"@en ;
+        dcterms:description "This file contains all the SHACL graph shapes constraints defined for this profile. It does not contain any inherited constraints"@en ;
+        dcterms:conformsTo <https://www.w3.org/TR/shacl/> ;
+        dcterms:format "text/turtle" ;
+        prof:hasArtifact <https://w3id.org/profile/dcat-voc/validation.ttl> ;
+        prof:hasRole role:constraints
+    ] ,
+    [
+        dcterms:title "Example of a valid vocabulary dataset description"@en ;
+        dcterms:description "This example vocabulary dataset description passes all the validation tests defined for this profile and those of the things it profiles"@en ;
+        dcterms:format "text/turtle" ;
+        prof:hasArtifact <https://w3id.org/profile/dcat-voc/examples/valid.ttl> ;
+        prof:hasRole role:example
+    ] ,
+    [
+        dcterms:title "Example of an invalid vocabulary dataset description"@en ;
+        dcterms:description "This example vocabulary dataset description does not satisfy the Specification's Requirement 2.1.5"@en ;
+        dcterms:format "text/turtle" ;
+        prof:hasArtifact <https://w3id.org/profile/dcat-voc/examples/invalid.ttl> ;
+        prof:hasRole role:example
+    ] ,
+    [
+        dcterms:title "Second example of an invalid vocabulary dataset description"@en ;
+        dcterms:description "This example vocabulary dataset description does not satisfy the Specification's Requirements 2.3.1 & 2.3.2"@en ;
+        dcterms:format "text/turtle" ;
+        prof:hasArtifact <https://w3id.org/profile/dcat-voc/examples/valid.2.ttl> ;
+        prof:hasRole role:example
+    ] ,
+    [
+        dcterms:title "Profile code repository"@en ;
+        dcterms:description "Code repository storing all Profile artifacts"@en ;
+        prof:hasArtifact <https://github.com/surroundaustralia/dcat-voc> ;
+        prof:hasRole role:repository
+    ] ;
+    prof:isProfileOf <https://www.w3.org/TR/vocab-dcat/> ;  # DCAT 2.0
+.
+
+<https://surroundaustralia.com>
+    a sdo:Organization ;
+    sdo:name "SURROUND Australia Pty Ltd" ;
+    sdo:url <https://surroundaustralia.com> ;
+.
