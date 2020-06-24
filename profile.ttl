@@ -12,7 +12,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     dcterms:creator <https://surroundaustralia.com> ;
     dcterms:modified "2020-06-24"^^xsd:date ;
     dcterms:publisher <https://surroundaustralia.com> ;
-    dcterms:description "A profile of DCAT for the cataloguing of vocabularies."@en ;
+    dcterms:description "A profile of DCAT for the cataloguing of vocabularies"@en ;
     dcterms:title "DCAT Vocabulary Profile" ;
     prof:hasResource [
         dcterms:title "Specification Document"@en ;
